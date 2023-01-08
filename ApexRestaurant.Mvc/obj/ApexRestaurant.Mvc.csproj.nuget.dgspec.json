@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "e:\\dotnet\\ApexRestaurant.Mvc\\ApexRestaurant.Mvc.csproj": {}
+    "E:\\dotnet\\ApexRestaurant\\ApexRestaurant.Mvc\\ApexRestaurant.Mvc.csproj": {}
   },
   "projects": {
-    "e:\\dotnet\\ApexRestaurant.Mvc\\ApexRestaurant.Mvc.csproj": {
+    "E:\\dotnet\\ApexRestaurant\\ApexRestaurant.Mvc\\ApexRestaurant.Mvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "e:\\dotnet\\ApexRestaurant.Mvc\\ApexRestaurant.Mvc.csproj",
+        "projectUniqueName": "E:\\dotnet\\ApexRestaurant\\ApexRestaurant.Mvc\\ApexRestaurant.Mvc.csproj",
         "projectName": "ApexRestaurant.Mvc",
-        "projectPath": "e:\\dotnet\\ApexRestaurant.Mvc\\ApexRestaurant.Mvc.csproj",
+        "projectPath": "E:\\dotnet\\ApexRestaurant\\ApexRestaurant.Mvc\\ApexRestaurant.Mvc.csproj",
         "packagesPath": "C:\\Users\\Ajai Shakya\\.nuget\\packages\\",
-        "outputPath": "e:\\dotnet\\ApexRestaurant.Mvc\\obj\\",
+        "outputPath": "E:\\dotnet\\ApexRestaurant\\ApexRestaurant.Mvc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ajai Shakya\\AppData\\Roaming\\NuGet\\NuGet.Config"
