@@ -5,6 +5,7 @@ using ApexRestaurant.Repository.RMenu;
 using ApexRestaurant.Repository.RMenuItems;
 using ApexRestaurant.Repository.RMeal;
 using ApexRestaurant.Repository.RMealDishes;
+using ApexRestaurant.Repository.RStaff;
 
 namespace ApexRestaurant.Repository
 {
@@ -21,7 +22,7 @@ services.AddTransient<IMenuRepository, MenuRepository>();
 services.AddTransient<IMenuItemsRepository, MenuItemsRepository>();
 services.AddTransient<IMealRepository, MealRepository>();
 services.AddTransient<IMealDishesRepository, MealDishesRepository>();
-// services.AddTransient<IStaffRepository, StaffRepository>();
+services.AddTransient<IStaffRepository, StaffRepository>();
 // services.AddTransient<IStaffRoleRepository, StaffRoleRepository>();
 }
 }
