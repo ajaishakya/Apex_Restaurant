@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ApexRestaurant.Repository.RCustomer;
 using ApexRestaurant.Repository.RMenu;
+using ApexRestaurant.Repository.RMenuItems;
 
 namespace ApexRestaurant.Repository
 {
@@ -15,7 +16,7 @@ builder.MigrationsAssembly(migrationsAssembly)));
 
 services.AddTransient<ICustomerRepository, CustomerRepository>();
 services.AddTransient<IMenuRepository, MenuRepository>();
-// services.AddTransient<IMenuItemsRepository, MenuItemsRepository>();
+services.AddTransient<IMenuItemsRepository, MenuItemsRepository>();
 // services.AddTransient<IMealRepository, MealRepository>();
 // services.AddTransient<IMealDishesRepository, MealDishesRepository>();
 // services.AddTransient<IStaffRepository, StaffRepository>();
