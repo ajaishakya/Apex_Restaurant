@@ -5,6 +5,7 @@ using ApexRestaurant.Services.SMenuItems;
 using ApexRestaurant.Services.SMeal;
 using ApexRestaurant.Services.SMealDishes;
 using ApexRestaurant.Services.SStaff;
+using ApexRestaurant.Services.SStaffRole;
 
 namespace ApexRestaurant.Services
 {
@@ -18,7 +19,7 @@ services.AddTransient<IMenuItemsService, MenuItemsService>();
 services.AddTransient<IMealService, MealService>();
 services.AddTransient<IMealDishesService, MealDishesService>();
 services.AddTransient<IStaffService, StaffService>();
-// services.AddTransient<IStaffRoleService, StaffRoleService>();
+services.AddTransient<IStaffRoleService, StaffRoleService>();
 }
 }
 }
