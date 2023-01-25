@@ -4,8 +4,8 @@ namespace ApexRestaurant.Repository.Domain
 {
 public class StaffRole
 {
-public int code { get; set; }
-public string description { get; set; }
+public int StaffRoleCode { get; set; }
+public string Description { get; set; }
 
 }
 }
