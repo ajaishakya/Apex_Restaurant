@@ -2,7 +2,7 @@ using ApexRestaurant.Repository.Domain;
 
 namespace ApexRestaurant.Repository.RMealDishes
 {
-public class MealDishesRepository : GenericRepository<MealDishes>, IMealDishesRepository
+public class MealDishesRepository : GenericRepository<StaffRole>, IMealDishesRepository
 {
 public MealDishesRepository(RestaurantContext dbContext)
 {

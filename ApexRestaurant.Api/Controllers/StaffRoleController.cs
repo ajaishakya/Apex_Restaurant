@@ -1,45 +1,45 @@
 using ApexRestaurant.Repository.Domain;
-using ApexRestaurant.Services.SCustomer;
+using ApexRestaurant.Services.SStaffRole;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApexRestaurant.Api.Controller
 {
     [Route("api/customer")]
-    public class CustomerController : ControllerBase
+    public class StaffRoleController : ControllerBase
     {
 
-        private readonly ICustomerService _customerService;
+        private readonly IStaffRoleService _staffroleService;
 
-        public CustomerController(ICustomerService customerService)
+        public StaffRoleController(IStaffRoleService staffroleService)
         {
-            _customerService = customerService;
+            _staffroleService = staffroleService;
         }
 
         [HttpGet]
         [Route("{id}")]
         public IActionResult Get([FromRoute] int id)
         {
-            var customer = _customerService.GetById(id);
+            var staffrole = _staffroleService.GetById(id);
 
-            if (customer == null)
+            if (staffrole == null)
                 return NotFound();
 
-            return Ok(customer);
+            return Ok(staffrole);
         }
 
         [HttpGet]
         [Route("")]
         public IActionResult GetAll()
         {
-            var customers = _customerService.GetAll();
-            return Ok(customers);
+            var staffroles = _staffroleService.GetAll();
+            return Ok(staffroles);
         }
 
         [HttpPost]
         [Route("")]
         public IActionResult Post([FromBody] StaffRole model)
         {
-            _customerService.Insert(model);
+            _staffroleService.Insert(model);
             return Ok();
         }
 
@@ -47,7 +47,7 @@ namespace ApexRestaurant.Api.Controller
         [Route("")]
         public IActionResult Put([FromBody] StaffRole model)
         {
-            _customerService.Update(model);
+            _staffroleService.Update(model);
             return Ok();
         }
 
@@ -55,7 +55,7 @@ namespace ApexRestaurant.Api.Controller
         [Route("")]
         public IActionResult Delete([FromBody] StaffRole model)
         {
-            _customerService.Delete(model);
+            _staffroleService.Delete(model);
             return Ok();
         }
 

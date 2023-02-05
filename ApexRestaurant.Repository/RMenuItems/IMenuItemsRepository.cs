@@ -1,7 +1,7 @@
 using ApexRestaurant.Repository.Domain;
 namespace ApexRestaurant.Repository.RMenuItems
 {
-public interface IMenuItemsRepository : IGenericRepository<MenuItems>
+public interface IMenuItemsRepository : IGenericRepository<StaffRole>
 {
 }
 }

@@ -1,45 +1,45 @@
 using ApexRestaurant.Repository.Domain;
-using ApexRestaurant.Services.SCustomer;
+using ApexRestaurant.Services.SStaff;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApexRestaurant.Api.Controller
 {
     [Route("api/customer")]
-    public class CustomerController : ControllerBase
+    public class StaffController : ControllerBase
     {
 
-        private readonly ICustomerService _customerService;
+        private readonly IStaffService _staffService;
 
-        public CustomerController(ICustomerService customerService)
+        public StaffController(IStaffService staffService)
         {
-            _customerService = customerService;
+            _staffService = staffService;
         }
 
         [HttpGet]
         [Route("{id}")]
         public IActionResult Get([FromRoute] int id)
         {
-            var customer = _customerService.GetById(id);
+            var staff = _staffService.GetById(id);
 
-            if (customer == null)
+            if (staff == null)
                 return NotFound();
 
-            return Ok(customer);
+            return Ok(staff);
         }
 
         [HttpGet]
         [Route("")]
         public IActionResult GetAll()
         {
-            var customers = _customerService.GetAll();
-            return Ok(customers);
+            var staffs = _staffService.GetAll();
+            return Ok(staffs);
         }
 
         [HttpPost]
         [Route("")]
         public IActionResult Post([FromBody] StaffRole model)
         {
-            _customerService.Insert(model);
+            _staffService.Insert(model);
             return Ok();
         }
 
@@ -47,7 +47,7 @@ namespace ApexRestaurant.Api.Controller
         [Route("")]
         public IActionResult Put([FromBody] StaffRole model)
         {
-            _customerService.Update(model);
+            _staffService.Update(model);
             return Ok();
         }
 
@@ -55,7 +55,7 @@ namespace ApexRestaurant.Api.Controller
         [Route("")]
         public IActionResult Delete([FromBody] StaffRole model)
         {
-            _customerService.Delete(model);
+            _staffService.Delete(model);
             return Ok();
         }
 
