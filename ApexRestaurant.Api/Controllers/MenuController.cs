@@ -37,7 +37,7 @@ namespace ApexRestaurant.Api.Controller
 
         [HttpPost]
         [Route("")]
-        public IActionResult Post([FromBody] StaffRole model)
+        public IActionResult Post([FromBody] Menu model)
         {
             _menuService.Insert(model);
             return Ok();
@@ -45,7 +45,7 @@ namespace ApexRestaurant.Api.Controller
 
         [HttpPut]
         [Route("")]
-        public IActionResult Put([FromBody] StaffRole model)
+        public IActionResult Put([FromBody] Menu model)
         {
             _menuService.Update(model);
             return Ok();
@@ -53,7 +53,7 @@ namespace ApexRestaurant.Api.Controller
 
         [HttpDelete]
         [Route("")]
-        public IActionResult Delete([FromBody] StaffRole model)
+        public IActionResult Delete([FromBody] Menu model)
         {
             _menuService.Delete(model);
             return Ok();

@@ -1,11 +1,13 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ApexRestaurant.Repository.Domain
 {
-public class MealDishes
-{
-public int MealId { get; set; }
-public int ItemId { get; set; }
-public int Quantity { get; set; }
-}
+    public class MealDishes
+    {
+        [Key]
+        public int MealDishesId { get; set; }
+        public int ItemId { get; set; }
+        public int Quantity { get; set; }
+    }
 }

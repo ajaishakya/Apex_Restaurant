@@ -3,7 +3,7 @@ using ApexRestaurant.Repository.RMenuItems;
 
 namespace ApexRestaurant.Services.SMenuItems
 {
-public class MenuItemsService : GenericService<StaffRole>, IMenuItemsService
+public class MenuItemsService : GenericService<MenuItems>, IMenuItemsService
 {
 public MenuItemsService(IMenuItemsRepository menuitemsRepository) :
 base(menuitemsRepository)

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ApexRestaurant.Api.Controller
 {
-    [Route("api/customer")]
+    [Route("api/staff")]
     public class StaffController : ControllerBase
     {
 
@@ -37,7 +37,7 @@ namespace ApexRestaurant.Api.Controller
 
         [HttpPost]
         [Route("")]
-        public IActionResult Post([FromBody] StaffRole model)
+        public IActionResult Post([FromBody] Staff model)
         {
             _staffService.Insert(model);
             return Ok();
@@ -45,7 +45,7 @@ namespace ApexRestaurant.Api.Controller
 
         [HttpPut]
         [Route("")]
-        public IActionResult Put([FromBody] StaffRole model)
+        public IActionResult Put([FromBody] Staff model)
         {
             _staffService.Update(model);
             return Ok();
@@ -53,7 +53,7 @@ namespace ApexRestaurant.Api.Controller
 
         [HttpDelete]
         [Route("")]
-        public IActionResult Delete([FromBody] StaffRole model)
+        public IActionResult Delete([FromBody] Staff model)
         {
             _staffService.Delete(model);
             return Ok();

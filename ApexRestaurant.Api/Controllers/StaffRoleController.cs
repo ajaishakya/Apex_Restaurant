@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ApexRestaurant.Api.Controller
 {
-    [Route("api/customer")]
+    [Route("api/staffrole")]
     public class StaffRoleController : ControllerBase
     {
 
